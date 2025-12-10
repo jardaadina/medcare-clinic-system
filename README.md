@@ -1,76 +1,69 @@
-# MedCare - Sistem de Management pentru Clinici Medicale
+# MedCare - Medical Clinic Management System
 
-##  Descriere
+## Description
 
-MedCare este o aplicație desktop dezvoltată pentru gestionarea eficientă a programărilor pacienților într-o clinică medicală. Sistemul permite înregistrarea și gestionarea consultațiilor realizate de medici, oferind o experiență fluidă atât pentru personalul administrativ cât și pentru recepționiști.
+MedCare is a desktop application designed for the efficient management of patient appointments in a medical clinic. The system allows for the registration and management of medical consultations, offering a smooth experience for both administrative staff and receptionists.
 
-## Tehnologii Utilizate
+## Technologies Used
 
-- **Backend**: Java 17, Spring Boot 3.4.4
-- **Frontend**: Java Swing
-- **Persistența datelor**: Spring Data JPA, Hibernate, MySQL
-- **Securitate**: Spring Security, BCrypt pentru criptarea parolelor
+- **Backend:** Java 17, Spring Boot 3.4.4
+- **Frontend:** Java Swing
+- **Data Persistence:** Spring Data JPA, Hibernate, MySQL
+- **Security:** Spring Security, BCrypt (for password encryption)
 
-## Funcționalități
+## Features
 
-### Autentificare și Autorizare
-- Acces securizat bazat pe login
-- Două tipuri de utilizatori: administratori și recepționiști
-- Parole stocate criptat în baza de date
+### Authentication and Authorization
+- Secure login-based access.
+- Two user roles: **Administrator** and **Receptionist**.
+- Passwords are encrypted in the database.
 
-### Administratori
-- Gestionarea conturilor pentru recepționiști
-- Administrarea listei de medici (adăugare, editare, ștergere)
-- Gestionarea serviciilor medicale oferite de clinică
-- Generarea și vizualizarea rapoartelor și statisticilor
-- Exportarea rapoartelor în format CSV sau XML
+### Administrators
+- Manage receptionist accounts.
+- Manage the list of doctors (add, edit, delete).
+- Manage medical services offered by the clinic.
+- Generate and view reports and statistics.
+- Export reports to **CSV** or **XML** format.
 
-### Recepționiști
-- Gestionarea programărilor pacienților
-- Verificarea disponibilității medicilor
-- Actualizarea statusului programărilor
-- Căutarea și filtrarea programărilor
+### Receptionists
+- Manage patient appointments.
+- Check doctor availability.
+- Update appointment status.
+- Search and filter appointments.
 
-### Gestionarea Medicilor
-- Înregistrarea informațiilor despre medici
-- Definirea programului de lucru pentru fiecare medic
-- Verificarea disponibilității pentru programări
+### Doctor Management
+- Register doctor information.
+- Define work schedules for each doctor.
+- Check availability for new appointments.
 
-### Servicii Medicale
-- Înregistrarea serviciilor oferite de clinică
-- Definirea prețului și duratei fiecărui serviciu
+### Medical Services
+- Register clinic services.
+- Define the price and duration for each service.
 
-### Programări
-- Înregistrarea și gestionarea programărilor
-- Evitarea suprapunerilor în programări
-- Actualizarea statusului programărilor
+### Appointments
+- Register and manage appointments.
+- Prevent scheduling overlaps.
+- Update appointment status.
 
-### Rapoarte și Statistici
-- Generarea rapoartelor cu programări între date calendaristice
-- Statistici privind cei mai solicitați medici
-- Statistici privind cele mai solicitate servicii medicale
+### Reports and Statistics
+- Generate reports for appointments within a specific date range.
+- Statistics on the most requested doctors.
+- Statistics on the most requested medical services.
 
-##  Arhitectură
+## Architecture
 
-Aplicația este structurată pe arhitectură stratificată (Layers):
-- **Presentation Layer**: Interfața utilizator dezvoltată în Java Swing
-- **Business Logic Layer**: Servicii care implementează logica de business
-- **Data Access Layer**: Repository-uri care facilitează accesul la date
-- **Data Layer**: Entitățile de bază și modelul de date
+The application follows a **Layered Architecture**:
+- **Presentation Layer:** User interface developed in Java Swing.
+- **Business Logic Layer:** Services that implement the business rules.
+- **Data Access Layer:** Repositories that facilitate database access.
+- **Data Layer:** Base entities and the data model.
 
-##  Structura Proiectului
+## Project Structure
 
-```
+```text
 com.medcare
-├── model        # Entitățile de business
-├── repository   # Interfețe pentru accesul la date
-├── service      # Servicii care implementează logica de business
-├── ui           # Componente de interfață utilizator
-└── config       # Configurări Spring
-```
-
-##  Dezvoltări Viitoare
-
-- Implementarea unui modul pentru gestionarea pacienților
-- Adăugarea unui modul de facturare
-- Implementarea unui sistem de notificări pentru programări
+├── model        # Business entities
+├── repository   # Data access interfaces
+├── service      # Services implementing business logic
+├── ui           # User interface components
+└── config       # Spring configurations
